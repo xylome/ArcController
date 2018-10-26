@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="placard.fr.eu.org.arccontroller.MainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/RedLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@color/redProgress" />
+
+        <SeekBar
+            android:id="@+id/red_seek_bar"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:max="255"
+            android:progress="70"
+            tools:layout_editor_absoluteX="140dp"
+            tools:layout_editor_absoluteY="87dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/greenLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@+id/RedLinearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/RedLinearLayout">
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@color/greenProgress" />
+        <SeekBar
+            android:id="@+id/green_seek_bar"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:max="255"
+            android:progress="70"
+            tools:layout_editor_absoluteX="140dp"
+            tools:layout_editor_absoluteY="121dp" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/blueLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@+id/greenLinearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/greenLinearLayout">
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@color/blueProgress" />
+
+        <SeekBar
+            android:id="@+id/blue_seek_bar"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:max="255"
+            android:progress="70"
+            tools:layout_editor_absoluteX="140dp"
+            tools:layout_editor_absoluteY="121dp" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/connect_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/connect"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

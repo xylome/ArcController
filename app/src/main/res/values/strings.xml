@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Arc Controller</string>
+    <string name="color_control">Color control</string>
+    <string name="connect">Connect</string>
+</resources>
